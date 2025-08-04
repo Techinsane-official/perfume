@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 export default function AdminLoginPage() {
@@ -9,6 +10,7 @@ export default function AdminLoginPage() {
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,7 +40,8 @@ export default function AdminLoginPage() {
       setError("Ongeldige gebruikersnaam of wachtwoord");
     }
     if (result?.ok) {
-      window.location.href = "/admin/dashboard";
+      router.push("/admin/dashboard");
+      router.refresh();
     }
     setIsLoading(false);
   };
