@@ -116,6 +116,14 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       return session;
     },
     async redirect({ url, baseUrl }) {
+      // Handle admin dashboard redirect
+      if (url.includes("/admin/dashboard")) {
+        return `${baseUrl}/admin/dashboard`;
+      }
+      // Handle buyer dashboard redirect
+      if (url.includes("/dashboard")) {
+        return `${baseUrl}/dashboard`;
+      }
       // Allow relative callback URLs
       if (url.startsWith("/")) return `${baseUrl}${url}`;
       // Allow callback URLs on the same origin
