@@ -1,0 +1,16 @@
+[33m133500d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Fix login redirects: change all /login/admin to /login for consistent authentication flow
+[33m56cba75[m Fix authentication flow: update SessionProvider and middleware redirects
+[33m310bc98[m Remove Netlify configuration to fix API routes for Vercel deployment
+[33m191f49e[m Fix authentication routing to use existing login pages
+[33mc3bc04d[m Configure project for Vercel deployment with optimized settings
+[33m9d60f89[m Update README with comprehensive project documentation
+[33m3aaf91a[m Initial commit: Project X - B2B Perfume Platform
+[33mb9d82bf[m Remove .env.local from tracking and disable secrets scanning
+[33mf3ad7fb[m Fix build issues and disable linting for faster Netlify deployment
+[33m6bf0c0b[m fix: resolve Netlify build issues - update Next.js config and fix TypeScript errors
+[33m2cae4f9[m feat: add Netlify deployment configuration
+[33mbea5daf[m fix: update Next.js 15 params handling and fix ESLint config
+[33m75d80da[m fix: add missing dependencies (puppeteer, pdfkit) and fix TypeScript const reassignment error
+[33mfacefe9[m fix: add missing dependencies (marked, json2csv, csv-parse) for Vercel build
+[33ma966cb7[m fix: update pnpm-lock.yaml to resolve Vercel deployment issues
+[33m42ce7c8[m Initial commit with hydration fixes
